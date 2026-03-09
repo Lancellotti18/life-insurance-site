@@ -65,12 +65,7 @@
 
       <div class="hero-right">
         <div class="hero-img-wrap">
-          <!-- Replace src="" with your actual image path to display it -->
-          <img id="hero-img" src="" alt="Hero" class="hero-img" />
-          <div class="hero-img-placeholder" id="hero-placeholder">
-            <div class="placeholder-icon">📸</div>
-            <p>Your image goes here &mdash; replace the <code>src</code> in <strong>index.html</strong></p>
-          </div>
+          <img src="hero.jpg" alt="Insurance team professionals" class="hero-img" />
         </div>
       </div>
     </section>
@@ -192,26 +187,5 @@
 
   <script src="background.js"></script>
   <script src="nav.js"></script>
-  <script>
-    // Show/hide hero image vs placeholder
-    (function() {
-      var img = document.getElementById('hero-img');
-      var placeholder = document.getElementById('hero-placeholder');
-      if (img && img.src && img.src !== window.location.href) {
-        img.classList.add('loaded');
-        if (placeholder) placeholder.style.display = 'none';
-      }
-      if (img) {
-        img.addEventListener('load', function() {
-          img.classList.add('loaded');
-          if (placeholder) placeholder.style.display = 'none';
-        });
-        img.addEventListener('error', function() {
-          img.style.display = 'none';
-          if (placeholder) placeholder.style.display = 'flex';
-        });
-      }
-    })();
-  </script>
 </body>
 </html>

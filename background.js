@@ -12,6 +12,7 @@
   const MAX_SPEED = 0.5;
   let orbs = [];
   let animId;
+  let particles = [];
 
   function resize() {
     canvas.width = window.innerWidth;
@@ -64,6 +65,37 @@
     ctx.fill();
   }
 
+  function spawnExplosion(x, y) {
+    const count = 18;
+    for (let i = 0; i < count; i++) {
+      const angle = (i / count) * Math.PI * 2;
+      const speed = rand(1.5, 5);
+      particles.push({
+        x, y,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        r: rand(2, 5),
+        alpha: 1,
+        life: 1,
+        decay: rand(0.018, 0.035),
+      });
+    }
+  }
+
+  function drawParticle(p) {
+    const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 3);
+    gradient.addColorStop(0, `rgba(255, 255, 255, ${p.alpha})`);
+    gradient.addColorStop(1, `rgba(255, 255, 255, 0)`);
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r * 3, 0, Math.PI * 2);
+    ctx.fillStyle = gradient;
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(255, 255, 255, ${p.alpha})`;
+    ctx.fill();
+  }
+
   function update() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -86,6 +118,19 @@
       drawOrb(orb);
     }
 
+    // Update and draw explosion particles
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vx *= 0.94;
+      p.vy *= 0.94;
+      p.life -= p.decay;
+      p.alpha = p.life;
+      if (p.life <= 0) { particles.splice(i, 1); continue; }
+      drawParticle(p);
+    }
+
     animId = requestAnimationFrame(update);
   }
 
@@ -95,6 +140,10 @@
     if (animId) cancelAnimationFrame(animId);
     update();
   }
+
+  window.addEventListener('click', (e) => {
+    spawnExplosion(e.clientX, e.clientY);
+  });
 
   window.addEventListener('resize', () => {
     resize();

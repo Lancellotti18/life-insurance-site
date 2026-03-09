@@ -3,135 +3,215 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LifeForce Insurance | Build Your Future</title>
+  <title>Join My Insurance Team | Build Your Future</title>
+  <meta name="description" content="Join a top-producing life insurance team. 100% remote, industry-leading commissions, 48-hour payouts, and full training provided. Apply today." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- Animated background canvas -->
   <canvas id="bg-canvas"></canvas>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="nav-group nav-left">
-      <a href="index.html" class="active">Home</a>
-      <a href="why-join.html">Why Join My Team</a>
-      <a href="deposits.html">My Deposits</a>
+  <!-- Hamburger button -->
+  <button id="hamburger" aria-label="Open navigation" aria-expanded="false">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <!-- Nav overlay -->
+  <div id="nav-overlay"></div>
+
+  <!-- Side nav panel -->
+  <nav id="side-nav" aria-label="Main navigation">
+    <div class="nav-header">
+      <div class="nav-brand">
+        My Insurance Team
+        <span>Life &amp; Financial Services</span>
+      </div>
+      <button id="nav-close" aria-label="Close navigation">&#x2715;</button>
     </div>
-    <div class="nav-group nav-center">
-      <a href="apply.html" class="nav-apply-btn">Apply Now</a>
-    </div>
-    <div class="nav-group nav-right">
-      <a href="schedule.html">Schedule Now</a>
-      <a href="team.html">My Team</a>
+    <ul class="nav-links">
+      <li><a href="index.html"><span class="nav-icon">🏠</span> Home</a></li>
+      <li><a href="why-join.html"><span class="nav-icon">⭐</span> Why Join My Team</a></li>
+      <li><a href="deposits.html"><span class="nav-icon">💰</span> My Deposits</a></li>
+      <li class="nav-cta"><a href="apply.html">Apply Now</a></li>
+      <li><a href="schedule.html"><span class="nav-icon">📅</span> Schedule Now</a></li>
+      <li><a href="team.html"><span class="nav-icon">👥</span> My Team</a></li>
+    </ul>
+    <div class="nav-footer">
+      &copy; 2025 My Insurance Team. All rights reserved.
     </div>
   </nav>
 
-  <div class="page">
+  <!-- Page content -->
+  <div class="page-content">
 
-    <!-- HERO -->
+    <!-- Hero Section -->
     <section class="hero">
-      <div class="hero-content">
-        <span class="hero-eyebrow">Life Insurance Sales Careers</span>
-        <h1>Build Wealth.<br /><span>Protect Families.</span><br />Lead Your Future.</h1>
-        <p>Join a high-performance life insurance sales team where uncapped commissions, flexible schedules, and genuine impact on people's lives are just the beginning.</p>
-        <a href="apply.html" class="btn-primary">Apply Now — It's Free</a>
-        <a href="why-join.html" class="btn-secondary">Learn More</a>
+      <div class="hero-left">
+        <div class="hero-eyebrow">Now Recruiting Nationwide</div>
+        <h1>Build a Career That <em>Pays You</em> What You're Worth</h1>
+        <p class="hero-sub">
+          Join a top-producing life insurance team with real income proof, 48-hour payouts,
+          and full remote flexibility. No cold calling. Warm, inbound leads provided.
+          You bring the drive — we'll handle the rest.
+        </p>
+        <div class="hero-ctas">
+          <a href="apply.html" class="btn btn-primary">Apply Now &rarr;</a>
+          <a href="why-join.html" class="btn btn-outline">Learn More</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-img-wrap">
+          <!-- Replace src="" with your actual image path to display it -->
+          <img id="hero-img" src="" alt="Hero" class="hero-img" />
+          <div class="hero-img-placeholder" id="hero-placeholder">
+            <div class="placeholder-icon">📸</div>
+            <p>Your image goes here &mdash; replace the <code>src</code> in <strong>index.html</strong></p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- STATS -->
+    <!-- Stats Bar -->
     <div class="stats-bar">
-      <div class="stat">
-        <span class="stat-number">$15K+</span>
-        <span class="stat-label">Avg. Monthly Earnings</span>
+      <div class="stat-item">
+        <h3>$15K+</h3>
+        <p>Avg. Monthly Income</p>
       </div>
-      <div class="stat">
-        <span class="stat-number">100%</span>
-        <span class="stat-label">Remote Friendly</span>
+      <div class="stat-item">
+        <h3>100%</h3>
+        <p>Remote Work</p>
       </div>
-      <div class="stat">
-        <span class="stat-number">48hr</span>
-        <span class="stat-label">Fast Commission Payouts</span>
+      <div class="stat-item">
+        <h3>48hr</h3>
+        <p>Commission Payouts</p>
       </div>
-      <div class="stat">
-        <span class="stat-number">50+</span>
-        <span class="stat-label">States Active</span>
+      <div class="stat-item">
+        <h3>50+</h3>
+        <p>States Available</p>
       </div>
     </div>
 
-    <!-- WHY US SECTION -->
-    <section class="section">
-      <h2 class="section-title">Why <span>LifeForce</span> Is Different</h2>
-      <p class="section-sub">We don't just sell insurance — we build entrepreneurs. Here's what sets our team apart from every other agency.</p>
-      <div class="cards">
-        <div class="card">
-          <div class="card-icon">💰</div>
-          <h3>Uncapped Commissions</h3>
-          <p>Your income is 100% tied to your performance — not a salary cap. Top agents earn $15K–$30K per month, consistently.</p>
+    <!-- Features Section -->
+    <section>
+      <div class="section-header">
+        <div class="section-tag">Why We're Different</div>
+        <h2 class="section-title">Everything You Need to Succeed</h2>
+        <p class="section-sub">We've built a system specifically designed to help motivated individuals hit six figures — even in their first year.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">🎯</span>
+          <h3>Warm Inbound Leads</h3>
+          <p>No cold calling ever. Our clients come to us through a proprietary lead system — you focus on helping people, not chasing them.</p>
         </div>
-        <div class="card">
-          <div class="card-icon">🕐</div>
-          <h3>Flexible Schedule</h3>
-          <p>Work when you want, where you want. Our remote-first model lets you design your workday around your life.</p>
+        <div class="feature-card">
+          <span class="feature-icon">⚡</span>
+          <h3>48-Hour Payouts</h3>
+          <p>Get paid fast. Commissions are processed and deposited within 48 hours of a policy being placed — some same-day.</p>
         </div>
-        <div class="card">
-          <div class="card-icon">📈</div>
-          <h3>Rapid Advancement</h3>
-          <p>Promotions based on merit, not tenure. New agents can reach leadership positions within their first 90 days.</p>
+        <div class="feature-card">
+          <span class="feature-icon">🌎</span>
+          <h3>100% Remote</h3>
+          <p>Work from your living room, a coffee shop, or anywhere with Wi-Fi. Full flexibility to design your own schedule.</p>
         </div>
-        <div class="card">
-          <div class="card-icon">🎓</div>
+        <div class="feature-card">
+          <span class="feature-icon">📈</span>
+          <h3>Uncapped Earnings</h3>
+          <p>There's no ceiling on what you can make. Your income grows as you grow — there are no arbitrary limits or caps.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🎓</span>
           <h3>Full Training Provided</h3>
-          <p>No experience? No problem. We provide comprehensive onboarding, mentorship, and ongoing coaching at no cost to you.</p>
+          <p>Zero experience required. We provide structured training, mentorship, and one-on-one coaching to get you producing quickly.</p>
         </div>
-        <div class="card">
-          <div class="card-icon">🤝</div>
-          <h3>Warm Leads Available</h3>
-          <p>Access to a steady flow of pre-qualified leads so you spend less time prospecting and more time closing.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">🛡️</div>
-          <h3>Make a Real Difference</h3>
-          <p>Every policy you write protects a family. This isn't just a job — it's a mission with real, lasting impact.</p>
+        <div class="feature-card">
+          <span class="feature-icon">🤝</span>
+          <h3>Team Culture</h3>
+          <p>Join a community of high-achievers who celebrate each other's wins. Weekly team calls, leaderboards, and shared success.</p>
         </div>
       </div>
     </section>
 
-    <!-- CTA SECTION -->
-    <section class="section section-alt" style="text-align:center;">
-      <h2 class="section-title">Ready to <span>Change Your Life?</span></h2>
-      <p class="section-sub">The application takes less than 5 minutes. We review every submission and will reach out within 48 hours.</p>
-      <a href="apply.html" class="btn-primary" style="font-size:1.05rem; padding: 1rem 2.8rem;">Start My Application</a>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section class="section">
-      <h2 class="section-title">How It <span>Works</span></h2>
-      <p class="section-sub">Getting started is simple. Here's what the journey looks like from application to first paycheck.</p>
-      <div class="cards" style="max-width:900px;">
-        <div class="card" style="border-top-color:#000; text-align:center;">
-          <div class="card-icon">📝</div>
-          <h3>Step 1 — Apply</h3>
-          <p>Submit your application online in under 5 minutes. No resume required for initial review.</p>
-        </div>
-        <div class="card" style="border-top-color:#5ab4e0; text-align:center;">
-          <div class="card-icon">📞</div>
-          <h3>Step 2 — Interview</h3>
-          <p>A quick virtual call to learn more about you, your goals, and what you're looking for.</p>
-        </div>
-        <div class="card" style="border-top-color:#89CFF0; text-align:center;">
-          <div class="card-icon">🚀</div>
-          <h3>Step 3 — Get Licensed & Start</h3>
-          <p>We guide you through licensing, onboard you to our systems, and get you earning within weeks.</p>
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-inner">
+        <h2>Ready to Change Your Financial Future?</h2>
+        <p>Thousands of people across 50+ states are already building wealth through life insurance sales. The only question is whether you'll join them. Applications take under 5 minutes.</p>
+        <div class="cta-buttons">
+          <a href="apply.html" class="btn btn-primary">Start Your Application</a>
+          <a href="schedule.html" class="btn btn-outline">Schedule a Call First</a>
         </div>
       </div>
     </section>
 
-  </div><!-- /page -->
+    <!-- How It Works -->
+    <section>
+      <div class="section-header">
+        <div class="section-tag">The Process</div>
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-sub">From application to first commission in as little as 2 weeks. Here's exactly what the journey looks like.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Apply Online</h3>
+          <p>Fill out our quick application — no resume needed. Just answer a few questions about yourself and your goals. Takes under 5 minutes.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Get Licensed</h3>
+          <p>We guide you through the state licensing process step by step. Most agents complete their license in 1–2 weeks from home.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Start Earning</h3>
+          <p>Get trained on our system, connect with your first leads, and begin earning commissions — with team support every step of the way.</p>
+        </div>
+      </div>
+    </section>
 
+  </div><!-- /page-content -->
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2026 LifeForce Insurance. All rights reserved. &nbsp;|&nbsp; <a href="apply.html">Apply Now</a> &nbsp;|&nbsp; <a href="schedule.html">Schedule a Call</a></p>
+    <div class="footer-brand">My Insurance Team</div>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="why-join.html">Why Join</a>
+      <a href="deposits.html">Deposits</a>
+      <a href="apply.html">Apply Now</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="team.html">Team</a>
+    </nav>
+    <p>Results may vary. Income figures represent examples from top-performing agents and are not guarantees of earnings. Insurance licensing required prior to selling.</p>
   </footer>
 
   <script src="background.js"></script>
+  <script src="nav.js"></script>
+  <script>
+    // Show/hide hero image vs placeholder
+    (function() {
+      var img = document.getElementById('hero-img');
+      var placeholder = document.getElementById('hero-placeholder');
+      if (img && img.src && img.src !== window.location.href) {
+        img.classList.add('loaded');
+        if (placeholder) placeholder.style.display = 'none';
+      }
+      if (img) {
+        img.addEventListener('load', function() {
+          img.classList.add('loaded');
+          if (placeholder) placeholder.style.display = 'none';
+        });
+        img.addEventListener('error', function() {
+          img.style.display = 'none';
+          if (placeholder) placeholder.style.display = 'flex';
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

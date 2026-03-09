@@ -3,116 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Team | LifeForce Insurance</title>
+  <title>Meet the Team | My Insurance Team</title>
+  <meta name="description" content="Meet the high-performing agents on our life insurance team. Real people, real results, across the country." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <canvas id="bg-canvas"></canvas>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="nav-group nav-left">
-      <a href="index.html">Home</a>
-      <a href="why-join.html">Why Join My Team</a>
-      <a href="deposits.html">My Deposits</a>
+  <button id="hamburger" aria-label="Open navigation" aria-expanded="false">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <div id="nav-overlay"></div>
+
+  <nav id="side-nav" aria-label="Main navigation">
+    <div class="nav-header">
+      <div class="nav-brand">
+        My Insurance Team
+        <span>Life &amp; Financial Services</span>
+      </div>
+      <button id="nav-close" aria-label="Close navigation">&#x2715;</button>
     </div>
-    <div class="nav-group nav-center">
-      <a href="apply.html" class="nav-apply-btn">Apply Now</a>
-    </div>
-    <div class="nav-group nav-right">
-      <a href="schedule.html">Schedule Now</a>
-      <a href="team.html" class="active">My Team</a>
+    <ul class="nav-links">
+      <li><a href="index.html"><span class="nav-icon">🏠</span> Home</a></li>
+      <li><a href="why-join.html"><span class="nav-icon">⭐</span> Why Join My Team</a></li>
+      <li><a href="deposits.html"><span class="nav-icon">💰</span> My Deposits</a></li>
+      <li class="nav-cta"><a href="apply.html">Apply Now</a></li>
+      <li><a href="schedule.html"><span class="nav-icon">📅</span> Schedule Now</a></li>
+      <li><a href="team.html"><span class="nav-icon">👥</span> My Team</a></li>
+    </ul>
+    <div class="nav-footer">
+      &copy; 2025 My Insurance Team. All rights reserved.
     </div>
   </nav>
 
-  <div class="page">
+  <div class="page-content">
 
     <div class="page-hero">
-      <h1>Meet <span>My Team</span></h1>
-      <p>Real people. Real results. Our team comes from every background imaginable — and that's exactly why it works.</p>
+      <div>
+        <div class="section-tag">Our People</div>
+        <h1>Meet My Team</h1>
+        <p>We're a group of driven, remote agents from all walks of life — united by the goal of building real financial freedom through life insurance. Every one of them started exactly where you are now.</p>
+      </div>
     </div>
 
-    <section class="section">
-      <h2 class="section-title">The <span>People</span> Behind the Numbers</h2>
-      <p class="section-sub">Every one of these agents started exactly where you are now. Here's where they are today.</p>
-
+    <section>
       <div class="team-grid">
 
         <div class="team-card">
-          <div class="team-avatar">👤</div>
-          <div class="team-info">
-            <h3>Team Member Name</h3>
-            <p>Senior Agent — 2 years</p>
-            <span class="team-badge">$18K / mo avg</span>
-            <p style="margin-top:0.75rem; font-size:0.82rem; color:var(--text-mid);">"I came from retail management with zero insurance experience. Within 6 months I doubled my old salary."</p>
-          </div>
+          <div class="team-avatar">👩</div>
+          <h3>Ashley R.</h3>
+          <div class="team-role">Team Leader</div>
+          <p>Former teacher who transitioned to life insurance after realizing she was capped at $40K/year. Now leads a team of 14 agents and earns over $20K per month consistently.</p>
+          <div class="team-stat">$20,000+ / month &middot; 2 years in</div>
         </div>
 
         <div class="team-card">
-          <div class="team-avatar">👤</div>
-          <div class="team-info">
-            <h3>Team Member Name</h3>
-            <p>Team Leader — 3 years</p>
-            <span class="team-badge">$25K / mo avg</span>
-            <p style="margin-top:0.75rem; font-size:0.82rem; color:var(--text-mid);">"The training here is unlike anything else in the industry. I went from licensed to leading a team in 4 months."</p>
-          </div>
+          <div class="team-avatar">👨</div>
+          <h3>Marcus T.</h3>
+          <div class="team-role">Senior Agent</div>
+          <p>Ex-warehouse supervisor looking for a career that rewarded hustle. Licensed within 10 days, made his first commission in week one. Works entirely from his home in Georgia.</p>
+          <div class="team-stat">$12,400 / month &middot; 14 months in</div>
         </div>
 
         <div class="team-card">
-          <div class="team-avatar">👤</div>
-          <div class="team-info">
-            <h3>Team Member Name</h3>
-            <p>Agent — 1 year</p>
-            <span class="team-badge">$12K / mo avg</span>
-            <p style="margin-top:0.75rem; font-size:0.82rem; color:var(--text-mid);">"I was skeptical at first. Now I'm earning more in a month than I used to make in a quarter at my old job."</p>
-          </div>
+          <div class="team-avatar">👩</div>
+          <h3>Brianna L.</h3>
+          <div class="team-role">Rising Agent</div>
+          <p>Stay-at-home mom who wanted to contribute financially without sacrificing time with her kids. Works 20–25 hours a week and has built a sustainable income she can scale on her own terms.</p>
+          <div class="team-stat">$7,200 / month &middot; 8 months in</div>
         </div>
 
         <div class="team-card">
-          <div class="team-avatar">👤</div>
-          <div class="team-info">
-            <h3>Team Member Name</h3>
-            <p>Agent — 8 months</p>
-            <span class="team-badge">$9K / mo avg</span>
-            <p style="margin-top:0.75rem; font-size:0.82rem; color:var(--text-mid);">"The warm leads system is a game-changer. I focus on helping people — the income follows naturally."</p>
-          </div>
+          <div class="team-avatar">👨</div>
+          <h3>Derek M.</h3>
+          <div class="team-role">Agent &amp; Recruiter</div>
+          <p>Left a corporate sales job after 8 years feeling undervalued and underpaid. Now earns more than double his old salary while working remote and spending more time with family.</p>
+          <div class="team-stat">$15,800 / month &middot; 18 months in</div>
         </div>
 
         <div class="team-card">
-          <div class="team-avatar">👤</div>
-          <div class="team-info">
-            <h3>Team Member Name</h3>
-            <p>Senior Agent — 2.5 years</p>
-            <span class="team-badge">$21K / mo avg</span>
-            <p style="margin-top:0.75rem; font-size:0.82rem; color:var(--text-mid);">"The culture here is what keeps me. Everyone genuinely wants to see each other win."</p>
-          </div>
+          <div class="team-avatar">👩</div>
+          <h3>Tanya W.</h3>
+          <div class="team-role">Senior Agent</div>
+          <p>Registered nurse who started part-time and loved it so much she went full-time. Her empathy and communication skills translated perfectly into helping families find the right coverage.</p>
+          <div class="team-stat">$11,000 / month &middot; 11 months in</div>
         </div>
 
         <div class="team-card">
-          <div class="team-avatar">👤</div>
-          <div class="team-info">
-            <h3>Your Name Here?</h3>
-            <p>Future Agent</p>
-            <span class="team-badge">Apply Today</span>
-            <p style="margin-top:0.75rem; font-size:0.82rem; color:var(--text-mid);">This spot could be yours. We're actively growing our team and looking for driven, motivated individuals.</p>
-          </div>
+          <div class="team-avatar">👨</div>
+          <h3>Carlos V.</h3>
+          <div class="team-role">New Agent</div>
+          <p>Recent college graduate who skipped the 9-to-5 path entirely. Two months in after licensing and already earning more than most starting salaries — fully remote from his apartment in Texas.</p>
+          <div class="team-stat">$5,400 / month &middot; 2 months in</div>
         </div>
 
       </div>
     </section>
 
-    <section class="section section-alt" style="text-align:center;">
-      <h2 class="section-title">Ready to <span>Join Us?</span></h2>
-      <p class="section-sub">We're selective about who we bring on — but if you're hungry, coachable, and ready to work, there's a spot for you.</p>
-      <a href="apply.html" class="btn-primary">Apply Now</a>
+    <section class="cta-section">
+      <div class="cta-inner">
+        <h2>Your Story Could Be Next</h2>
+        <p>Every person above had zero experience in life insurance before joining. What they had was a willingness to learn and follow a proven system. That's all it takes. Ready to write your own chapter?</p>
+        <div class="cta-buttons">
+          <a href="apply.html" class="btn btn-primary">Join the Team</a>
+          <a href="deposits.html" class="btn btn-outline">See Their Income Proof</a>
+        </div>
+      </div>
     </section>
 
-  </div><!-- /page -->
+  </div>
 
   <footer>
-    <p>&copy; 2026 LifeForce Insurance. All rights reserved. &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="apply.html">Apply Now</a></p>
+    <div class="footer-brand">My Insurance Team</div>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="why-join.html">Why Join</a>
+      <a href="deposits.html">Deposits</a>
+      <a href="apply.html">Apply Now</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="team.html">Team</a>
+    </nav>
+    <p>Results may vary. Income figures represent examples from top-performing agents and are not guarantees of earnings. Insurance licensing required prior to selling.</p>
   </footer>
 
   <script src="background.js"></script>
+  <script src="nav.js"></script>
 </body>
 </html>

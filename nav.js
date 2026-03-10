@@ -47,6 +47,32 @@
     }
   });
 
+  // Reset nav item animation state so stagger replays each open
+  sideNav.addEventListener('transitionend', function() {
+    if (!sideNav.classList.contains('open')) {
+      var items = sideNav.querySelectorAll('.nav-links li');
+      items.forEach(function(li) {
+        li.style.animation = 'none';
+        li.offsetHeight; // reflow
+        li.style.animation = '';
+      });
+    }
+  });
+
+  // Smooth page transition on navigation
+  (function pageTransitions() {
+    document.querySelectorAll('a[href]').forEach(function(link) {
+      var href = link.getAttribute('href');
+      if (!href || href.charAt(0) === '#' || href.indexOf('http') === 0 || href.indexOf('mailto') === 0 || href.indexOf('tel') === 0) return;
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var dest = href;
+        document.body.classList.add('page-exit');
+        setTimeout(function() { window.location.href = dest; }, 280);
+      });
+    });
+  })();
+
   // Active link highlighting — match current page filename
   (function highlightActive() {
     const path = window.location.pathname;

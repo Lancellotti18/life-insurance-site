@@ -146,6 +146,32 @@
       </div>
     </section>
 
+    <!-- Impact Counters -->
+    <section class="counter-section">
+      <div class="section-header" style="text-align:center;">
+        <div class="section-tag">Our Impact</div>
+        <h2 class="section-title">Numbers That Speak for Themselves</h2>
+      </div>
+      <div class="counter-grid">
+        <div class="counter-item">
+          <div class="counter-value" data-target="3.2" data-prefix="$" data-suffix="M+" data-decimals="1">$0</div>
+          <div class="counter-label">Total Deposited</div>
+        </div>
+        <div class="counter-item">
+          <div class="counter-value" data-target="150" data-suffix="+">0</div>
+          <div class="counter-label">Active Team Members</div>
+        </div>
+        <div class="counter-item">
+          <div class="counter-value" data-target="900" data-suffix="+">0</div>
+          <div class="counter-label">Clients Helped</div>
+        </div>
+        <div class="counter-item">
+          <div class="counter-value" data-target="48" data-suffix="hr">0</div>
+          <div class="counter-label">Avg. Payout Time</div>
+        </div>
+      </div>
+    </section>
+
     <!-- How It Works -->
     <section>
       <div class="section-header">
@@ -191,5 +217,35 @@
 
   <script src="background.js"></script>
   <script src="nav.js"></script>
+  <script>
+    /* ── Counter animation ── */
+    (function() {
+      var counters = document.querySelectorAll('.counter-value');
+      if (!counters.length) return;
+      function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+      function animateCounter(el) {
+        var target = parseFloat(el.dataset.target);
+        var prefix = el.dataset.prefix || '';
+        var suffix = el.dataset.suffix || '';
+        var decimals = el.dataset.decimals ? parseInt(el.dataset.decimals) : 0;
+        var duration = 2200;
+        var start = performance.now();
+        function update(now) {
+          var t = Math.min((now - start) / duration, 1);
+          var val = easeOut(t) * target;
+          el.textContent = prefix + (decimals ? val.toFixed(decimals) : Math.floor(val)) + suffix;
+          if (t < 1) requestAnimationFrame(update);
+          else el.textContent = prefix + (decimals ? target.toFixed(decimals) : target) + suffix;
+        }
+        requestAnimationFrame(update);
+      }
+      var io = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) { animateCounter(e.target); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.5 });
+      counters.forEach(function(el) { io.observe(el); });
+    })();
+  </script>
 </body>
 </html>

@@ -28,12 +28,12 @@
       <button id="nav-close" aria-label="Close navigation">&#x2715;</button>
     </div>
     <ul class="nav-links">
-      <li><a href="index.html"><span class="nav-icon">🏠</span> Home</a></li>
-      <li><a href="why-join.html"><span class="nav-icon">⭐</span> Why Join My Team</a></li>
-      <li><a href="deposits.html"><span class="nav-icon">💰</span> My Deposits</a></li>
       <li class="nav-cta"><a href="apply.html">Apply Now</a></li>
-      <li><a href="schedule.html"><span class="nav-icon">📅</span> Schedule Now</a></li>
+      <li><a href="index.html"><span class="nav-icon">🏠</span> Home</a></li>
+      <li><a href="deposits.html"><span class="nav-icon">💰</span> My Deposits</a></li>
       <li><a href="team.html"><span class="nav-icon">👥</span> My Team</a></li>
+      <li><a href="why-join.html"><span class="nav-icon">⭐</span> Why Join My Team</a></li>
+      <li><a href="schedule.html"><span class="nav-icon">📅</span> Schedule a Meeting</a></li>
     </ul>
     <div class="nav-footer">
       &copy; 2025 My Insurance Team. All rights reserved.
@@ -57,54 +57,115 @@
         <p class="section-sub" style="margin:0 auto;">These figures represent commission income from real policies placed. Results vary based on effort, experience, and market. New agents typically see these ranges after 30–90 days.</p>
       </div>
 
-      <div class="deposits-grid">
-
-        <div class="deposit-card">
-          <div class="deposit-amount">$4,820</div>
-          <div class="deposit-label">Week 1 as Licensed Agent</div>
-          <p class="deposit-detail">First full week writing policies after completing licensing. Part-time hours while still working another job.</p>
-          <div class="deposit-badge">New Agent</div>
+      <div class="deposit-carousel-outer">
+        <div class="deposit-carousel-track">
+          <!-- Set 1 -->
+          <div class="carousel-deposit-card">
+            <div class="deposit-amount">$4,820</div>
+            <div class="deposit-label">Week 1 as Licensed Agent</div>
+            <p class="deposit-detail">First full week writing policies after licensing. Part-time hours while still working another job.</p>
+            <div class="deposit-badge">New Agent</div>
+          </div>
+          <div class="carousel-deposit-card">
+            <div class="deposit-amount">$9,340</div>
+            <div class="deposit-label">Month 1 Full Production</div>
+            <p class="deposit-detail">First month working full time. Completed training, followed the system, worked consistently 5 days a week.</p>
+            <div class="deposit-badge">Month 1</div>
+          </div>
+          <div class="carousel-deposit-card">
+            <div class="deposit-amount">$13,200</div>
+            <div class="deposit-label">Month 3 Commission</div>
+            <p class="deposit-detail">Agent developed their workflow, improved close rate, and started receiving referrals from existing clients.</p>
+            <div class="deposit-badge">Month 3</div>
+          </div>
+          <div class="carousel-deposit-card">
+            <div class="deposit-amount">$18,750</div>
+            <div class="deposit-label">Month 6 Commission</div>
+            <p class="deposit-detail">Six months in, this agent began building their own downline and added override income on top of direct sales.</p>
+            <div class="deposit-badge">Month 6</div>
+          </div>
+          <div class="carousel-deposit-card">
+            <div class="deposit-amount">$24,100</div>
+            <div class="deposit-label">Top Agent — Single Month</div>
+            <p class="deposit-detail">Experienced team leader with a fully built downline. Combination of personal production and override residuals.</p>
+            <div class="deposit-badge">Team Leader</div>
+          </div>
+          <div class="carousel-deposit-card">
+            <div class="deposit-amount">$31,800</div>
+            <div class="deposit-label">Record Month — Team Leader</div>
+            <p class="deposit-detail">Best single month recorded on our team. Achieved through consistent production and a high-performing team of 12 agents.</p>
+            <div class="deposit-badge">Record</div>
+          </div>
+          <div class="carousel-deposit-card">
+            <div class="deposit-amount">$7,600</div>
+            <div class="deposit-label">Month 2 Commission</div>
+            <p class="deposit-detail">Building momentum in month two with improving systems and growing client referral base.</p>
+            <div class="deposit-badge">Month 2</div>
+          </div>
+          <div class="carousel-deposit-card">
+            <div class="deposit-amount">$21,400</div>
+            <div class="deposit-label">Year 1 — Strong Close</div>
+            <p class="deposit-detail">Agent hit their stride after one full year with a record personal production month.</p>
+            <div class="deposit-badge">Year 1</div>
+          </div>
+          <!-- Set 2 (duplicate for infinite loop) -->
+          <div class="carousel-deposit-card">
+            <div class="deposit-amount">$4,820</div>
+            <div class="deposit-label">Week 1 as Licensed Agent</div>
+            <p class="deposit-detail">First full week writing policies after licensing. Part-time hours while still working another job.</p>
+            <div class="deposit-badge">New Agent</div>
+          </div>
+          <div class="carousel-deposit-card">
+            <div class="deposit-amount">$9,340</div>
+            <div class="deposit-label">Month 1 Full Production</div>
+            <p class="deposit-detail">First month working full time. Completed training, followed the system, worked consistently 5 days a week.</p>
+            <div class="deposit-badge">Month 1</div>
+          </div>
+          <div class="carousel-deposit-card">
+            <div class="deposit-amount">$13,200</div>
+            <div class="deposit-label">Month 3 Commission</div>
+            <p class="deposit-detail">Agent developed their workflow, improved close rate, and started receiving referrals from existing clients.</p>
+            <div class="deposit-badge">Month 3</div>
+          </div>
+          <div class="carousel-deposit-card">
+            <div class="deposit-amount">$18,750</div>
+            <div class="deposit-label">Month 6 Commission</div>
+            <p class="deposit-detail">Six months in, this agent began building their own downline and added override income on top of direct sales.</p>
+            <div class="deposit-badge">Month 6</div>
+          </div>
+          <div class="carousel-deposit-card">
+            <div class="deposit-amount">$24,100</div>
+            <div class="deposit-label">Top Agent — Single Month</div>
+            <p class="deposit-detail">Experienced team leader with a fully built downline. Combination of personal production and override residuals.</p>
+            <div class="deposit-badge">Team Leader</div>
+          </div>
+          <div class="carousel-deposit-card">
+            <div class="deposit-amount">$31,800</div>
+            <div class="deposit-label">Record Month — Team Leader</div>
+            <p class="deposit-detail">Best single month recorded on our team. Achieved through consistent production and a high-performing team of 12 agents.</p>
+            <div class="deposit-badge">Record</div>
+          </div>
+          <div class="carousel-deposit-card">
+            <div class="deposit-amount">$7,600</div>
+            <div class="deposit-label">Month 2 Commission</div>
+            <p class="deposit-detail">Building momentum in month two with improving systems and growing client referral base.</p>
+            <div class="deposit-badge">Month 2</div>
+          </div>
+          <div class="carousel-deposit-card">
+            <div class="deposit-amount">$21,400</div>
+            <div class="deposit-label">Year 1 — Strong Close</div>
+            <p class="deposit-detail">Agent hit their stride after one full year with a record personal production month.</p>
+            <div class="deposit-badge">Year 1</div>
+          </div>
         </div>
+      </div>
 
-        <div class="deposit-card">
-          <div class="deposit-amount">$9,340</div>
-          <div class="deposit-label">Month 1 Full Production</div>
-          <p class="deposit-detail">First month working full time. Completed training, followed the system, and worked consistently 5 days a week.</p>
-          <div class="deposit-badge">Month 1</div>
-        </div>
-
-        <div class="deposit-card">
-          <div class="deposit-amount">$13,200</div>
-          <div class="deposit-label">Month 3 Commission</div>
-          <p class="deposit-detail">Agent developed their workflow, improved close rate, and started receiving referrals from existing clients.</p>
-          <div class="deposit-badge">Month 3</div>
-        </div>
-
-        <div class="deposit-card">
-          <div class="deposit-amount">$18,750</div>
-          <div class="deposit-label">Month 6 Commission</div>
-          <p class="deposit-detail">Six months in, this agent began building their own downline team and added override income on top of direct sales.</p>
-          <div class="deposit-badge">Month 6</div>
-        </div>
-
-        <div class="deposit-card">
-          <div class="deposit-amount">$24,100</div>
-          <div class="deposit-label">Top Agent — Single Month</div>
-          <p class="deposit-detail">Experienced team leader with a fully built downline. Combination of personal production and override residuals.</p>
-          <div class="deposit-badge">Team Leader</div>
-        </div>
-
-        <div class="deposit-card">
-          <div class="deposit-amount">$31,800</div>
-          <div class="deposit-label">Record Month — Team Leader</div>
-          <p class="deposit-detail">Best single month recorded on our team. Achieved through consistent production and a high-performing team of 12 agents.</p>
-          <div class="deposit-badge">Record</div>
-        </div>
-
+      <div class="carousel-cta">
+        <a href="portfolio.html" class="btn btn-view-all">View All Deposits</a>
       </div>
 
       <div class="disclaimer-box">
-        <strong>Important Disclosure:</strong> The income figures shown on this page are examples from real agents on our team and are provided for illustrative purposes only. Individual results vary significantly based on time invested, experience level, market conditions, and personal effort. These figures are not guarantees of earnings. You may earn more, less, or nothing at all. Life insurance sales requires a valid state license. Licensing costs, study time, and approval timelines vary by state.
+        <strong>Important Disclosure:</strong> The income figures shown on this page are examples from real agents on our team and are provided for illustrative purposes only. Individual results vary significantly based on time invested, experience level, market conditions, and personal effort. These figures are not guarantees of earnings. You may earn more, less, or nothing at all. Life insurance sales requires a valid state license.
       </div>
     </section>
 

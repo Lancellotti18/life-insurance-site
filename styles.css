@@ -1373,12 +1373,17 @@ footer .footer-links a:hover {
 @media (max-width: 600px) {
   .stats-bar {
     grid-template-columns: repeat(2, 1fr);
-    margin: 0 3% 3rem;
-    padding: 1.2rem;
+    margin: 0 3% 2.5rem;
+    padding: 1rem;
+    gap: 0.8rem;
   }
 
   .stat-item h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .stat-item p {
+    font-size: 0.72rem;
   }
 
   .features-grid {
@@ -1394,14 +1399,126 @@ footer .footer-links a:hover {
   }
 
   section {
-    padding: 3.5rem 5%;
+    padding: 3rem 4%;
   }
 
   .cta-inner {
-    padding: 2.5rem 1.5rem;
+    padding: 2.2rem 1.2rem;
+  }
+
+  .cta-inner h2 {
+    font-size: clamp(1.4rem, 5vw, 2rem);
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-buttons .btn {
+    text-align: center;
   }
 
   .portfolio-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .counter-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .counter-item {
+    padding: 1.4rem 1rem;
+  }
+
+  .hero {
+    padding: 4rem 4% 3rem;
+    gap: 2rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.8rem, 7vw, 2.6rem);
+  }
+
+  .hero-sub {
+    font-size: 0.92rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+
+  .hero-ctas .btn {
+    text-align: center;
+  }
+
+  .hero-img-cta .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .page-hero {
+    padding: 5rem 4% 2.5rem;
+  }
+
+  .portfolio-hero {
+    padding: 5rem 4% 2rem;
+  }
+
+  .deposit-carousel-card {
+    min-width: 240px;
+    max-width: 240px;
+  }
+
+  #side-nav {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .section-title {
+    font-size: clamp(1.4rem, 6vw, 2rem);
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .btn {
+    min-height: 44px;
+    padding: 0.75rem 1.4rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+    padding: 0.9rem;
+  }
+
+  .counter-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-ctas {
+    gap: 0.6rem;
+  }
+
+  footer .footer-links {
+    gap: 0.8rem;
+  }
+
+  .deposit-carousel-card {
+    min-width: 200px;
+    max-width: 200px;
   }
 }

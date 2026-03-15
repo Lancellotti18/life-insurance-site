@@ -862,55 +862,58 @@ section {
 
 /* ── Why Join Hero ── */
 .team-photo-hero {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  margin: 5rem auto 0;
-  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 6rem 5% 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-photo-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.team-photo-img-wrap {
+  flex: 1.2;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+  box-shadow: 0 32px 80px rgba(0,0,0,0.5);
 }
 
 .team-photo-img {
   width: 100%;
   display: block;
   object-fit: cover;
-  max-height: 520px;
-  filter: brightness(0.45);
-}
-
-.team-photo-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
 }
 
 .team-photo-title {
-  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
   font-weight: 900;
   color: #fff;
   line-height: 1.05;
   letter-spacing: -0.02em;
   margin: 0.6rem 0 1rem;
-  text-shadow: 0 4px 24px rgba(0,0,0,0.5);
 }
 
 .team-photo-title em {
   font-style: normal;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.6);
 }
 
 .team-photo-sub {
   font-size: 1rem;
-  color: rgba(255,255,255,0.85);
-  max-width: 520px;
+  color: rgba(255,255,255,0.8);
   line-height: 1.7;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 768px) {
+  .team-photo-hero {
+    flex-direction: column;
+    padding: 5rem 5% 2rem;
+    gap: 2rem;
+  }
 }
 
 /* ── Why Join ── */

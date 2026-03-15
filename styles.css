@@ -860,6 +860,59 @@ section {
   margin-bottom: 0.5rem;
 }
 
+/* ── Why Join Hero ── */
+.team-photo-hero {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 5rem auto 0;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+}
+
+.team-photo-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 520px;
+  filter: brightness(0.45);
+}
+
+.team-photo-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.team-photo-title {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0.6rem 0 1rem;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.5);
+}
+
+.team-photo-title em {
+  font-style: normal;
+  color: rgba(255,255,255,0.7);
+}
+
+.team-photo-sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.85);
+  max-width: 520px;
+  line-height: 1.7;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
 /* ── Why Join ── */
 .benefits-list {
   display: grid;

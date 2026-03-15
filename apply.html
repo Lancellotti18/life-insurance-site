@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Apply Now | Join My Insurance Team</title>
   <meta name="description" content="Apply to join our life insurance team. Takes under 5 minutes. No experience required — we train you from scratch." />
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=5" />
 </head>
 <body>
 
@@ -97,37 +97,21 @@
 
           <div class="form-group">
             <label>Are you at least 18 years old? <span style="color:#c00">*</span></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="age_18" value="yes" required />
-                Yes, I am 18 or older
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="age_18" value="no" />
-                No, I am under 18
-              </label>
+            <input type="hidden" name="age_18" id="age_18_val" />
+            <div class="btn-select-group" data-target="age_18_val">
+              <button type="button" class="btn-select" data-value="yes">Yes, I am 18 or older</button>
+              <button type="button" class="btn-select" data-value="no">No, I am under 18</button>
             </div>
           </div>
 
           <div class="form-group">
             <label>What is your ideal monthly income goal? <span style="color:#c00">*</span></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="income_goal" value="2000-5000" required />
-                $2,000 – $5,000 / month
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="income_goal" value="5000-10000" />
-                $5,000 – $10,000 / month
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="income_goal" value="10000-20000" />
-                $10,000 – $20,000 / month
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="income_goal" value="20000+" />
-                $20,000+ / month
-              </label>
+            <input type="hidden" name="income_goal" id="income_goal_val" />
+            <div class="btn-select-group" data-target="income_goal_val">
+              <button type="button" class="btn-select" data-value="2000-5000">$2,000 – $5,000 / month</button>
+              <button type="button" class="btn-select" data-value="5000-10000">$5,000 – $10,000 / month</button>
+              <button type="button" class="btn-select" data-value="10000-20000">$10,000 – $20,000 / month</button>
+              <button type="button" class="btn-select" data-value="20000+">$20,000+ / month</button>
             </div>
           </div>
 
@@ -138,15 +122,10 @@
 
           <div class="form-group">
             <label>Are you willing to work more than 55+ hours a week? <span style="color:#c00">*</span></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="work_55plus" value="yes" required />
-                Yes, I am willing to work more than 55+ hours
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="work_55plus" value="no" />
-                No, I am not willing to work more than 55+ hours
-              </label>
+            <input type="hidden" name="work_55plus" id="work_55plus_val" />
+            <div class="btn-select-group" data-target="work_55plus_val">
+              <button type="button" class="btn-select" data-value="yes">Yes, I am willing to work more than 55+ hours</button>
+              <button type="button" class="btn-select" data-value="no">No, I am not willing to work more than 55+ hours</button>
             </div>
           </div>
 
@@ -176,6 +155,17 @@
 
   <script src="nav.js"></script>
   <script>
+    // Button selector groups
+    document.querySelectorAll('.btn-select-group').forEach(function(group) {
+      group.querySelectorAll('.btn-select').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          group.querySelectorAll('.btn-select').forEach(function(b) { b.classList.remove('selected'); });
+          btn.classList.add('selected');
+          document.getElementById(group.dataset.target).value = btn.dataset.value;
+        });
+      });
+    });
+
     document.getElementById('application-form').addEventListener('submit', function(e) {
       e.preventDefault();
       alert('Thank you for applying! We\'ll be in touch within 24\u201348 hours.');

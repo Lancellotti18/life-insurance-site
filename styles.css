@@ -722,7 +722,7 @@ section {
   margin-bottom: 0.5rem;
 }
 
-.form-group input,
+.form-group input:not([type="radio"]),
 .form-group select,
 .form-group textarea {
   width: 100%;

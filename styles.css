@@ -34,7 +34,7 @@ body {
       transparent 80px
     );
   background-attachment: fixed;
-  background-size: 80px 100%;
+  background-size: 80px 80px;
   animation: grid-drift 28s linear infinite;
   color: #0d1b2a;
   min-height: 100vh;

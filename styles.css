@@ -904,6 +904,7 @@ section {
   color: rgba(255,255,255,0.8);
   line-height: 1.7;
   max-width: 620px;
+  text-align: center;
 }
 
 /* ── Why Join ── */

@@ -23,7 +23,7 @@ body {
     linear-gradient(to right, rgba(255,255,255,0.10) 1px, transparent 1px);
   background-size: 80px 80px;
   background-attachment: fixed;
-  animation: grid-drift 28s linear infinite;
+  animation: grid-drift 10s linear infinite;
   color: #0d1b2a;
   min-height: 100vh;
   overflow-x: hidden;

@@ -18,13 +18,21 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #0B1F3B;
-  background-image: repeating-linear-gradient(
-    to right,
-    rgba(255,255,255,0.10) 0px,
-    rgba(255,255,255,0.10) 1px,
-    transparent 1px,
-    transparent 80px
-  );
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      rgba(255,255,255,0.10) 0px,
+      rgba(255,255,255,0.10) 1px,
+      transparent 1px,
+      transparent 80px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.10) 0px,
+      rgba(255,255,255,0.10) 1px,
+      transparent 1px,
+      transparent 80px
+    );
   background-attachment: fixed;
   background-size: 80px 100%;
   animation: grid-drift 28s linear infinite;

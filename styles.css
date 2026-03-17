@@ -1071,6 +1071,252 @@ section {
   border: 1px solid rgba(255,255,255,0.12);
 }
 
+/* ── Calendar ── */
+.cal-wrap {
+  max-width: 520px;
+  margin: 0 auto 3rem;
+}
+
+.cal-box {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+  padding: 2rem;
+}
+
+.cal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+}
+
+.cal-month-label {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.cal-nav {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 1.1rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.cal-nav:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.cal-weekdays span {
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.cal-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.85);
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  background: rgba(255,255,255,0.04);
+}
+
+.cal-day:hover:not(.past):not(.empty) {
+  background: rgba(255,255,255,0.14);
+  border-color: rgba(255,255,255,0.35);
+}
+
+.cal-day.selected {
+  background: rgba(255,255,255,0.22);
+  border-color: #fff;
+  color: #fff;
+  font-weight: 700;
+}
+
+.cal-day.past {
+  color: rgba(255,255,255,0.22);
+  cursor: not-allowed;
+  background: transparent;
+}
+
+.cal-day.today {
+  border-color: rgba(255,255,255,0.5);
+}
+
+.cal-day.empty {
+  background: transparent;
+  cursor: default;
+  border-color: transparent;
+}
+
+.cal-time-row {
+  margin-top: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cal-time-row label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+}
+
+.cal-time-row select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.92rem;
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.cal-time-row select:focus {
+  border-color: rgba(255,255,255,0.55);
+}
+
+.cal-time-row select option {
+  background: #0B1F3B;
+  color: #fff;
+}
+
+.cal-selected-list {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 0;
+}
+
+.cal-selected-chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 10px;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.85rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.cal-chip-remove {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.55);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0 0 0 0.6rem;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.cal-chip-remove:hover {
+  color: #fff;
+}
+
+.cal-disclaimer {
+  margin-top: 1.2rem;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+  padding: 0.8rem 1rem;
+  background: rgba(255,255,255,0.04);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.cal-disclaimer strong {
+  color: rgba(255,255,255,0.75);
+}
+
+.cal-submit-btn {
+  width: 100%;
+  margin-top: 1.4rem;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.cal-submit-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Scheduled dates banner on apply page */
+.scheduled-dates-banner {
+  background: rgba(255,255,255,0.09);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 14px;
+  padding: 1.2rem 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.scheduled-dates-banner h4 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.scheduled-dates-banner ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.scheduled-dates-banner li {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.75);
+}
+
 /* ── Schedule ── */
 .calendly-placeholder {
   background: rgba(255,255,255,0.07);

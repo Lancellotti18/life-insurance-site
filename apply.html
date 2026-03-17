@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Apply Now | Join My Insurance Team</title>
   <meta name="description" content="Apply to join our life insurance team. Takes under 5 minutes. No experience required — we train you from scratch." />
-  <link rel="stylesheet" href="styles.css?v=7" />
+  <link rel="stylesheet" href="styles.css?v=8" />
 </head>
 <body>
 
@@ -51,8 +51,13 @@
 
     <div class="form-section">
 
+      <div id="cal-dates-banner" class="scheduled-dates-banner" style="display:none;">
+        <h4>Your Requested Call Times</h4>
+        <ul id="cal-dates-list"></ul>
+      </div>
+
       <div class="form-wrap">
-        <form id="application-form" novalidate>
+        <form id="application-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
 
           <div class="form-row">
             <div class="form-group">
@@ -129,6 +134,9 @@
             </div>
           </div>
 
+          <input type="hidden" name="preferred_dates" id="preferred_dates_input" />
+          <input type="hidden" name="preferred_time_window" id="preferred_time_input" />
+
           <div class="form-submit">
             <button type="submit" class="btn btn-primary">Submit My Application &rarr;</button>
             <p class="form-note">We'll review your application and reach out within 24–48 hours via email or phone.</p>
@@ -166,10 +174,30 @@
       });
     });
 
-    document.getElementById('application-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Thank you for applying! We\'ll be in touch within 24\u201348 hours.');
-    });
+    // Pull scheduled dates from sessionStorage (set by schedule.html)
+    (function() {
+      var rawDates = sessionStorage.getItem('cal_dates');
+      var rawTime  = sessionStorage.getItem('cal_time');
+      if (rawDates) {
+        try {
+          var dates = JSON.parse(rawDates);
+          var time  = rawTime || '';
+          if (dates && dates.length > 0) {
+            var banner = document.getElementById('cal-dates-banner');
+            var list   = document.getElementById('cal-dates-list');
+            dates.forEach(function(d) {
+              var li = document.createElement('li');
+              li.textContent = d + (time ? '  —  ' + time : '');
+              list.appendChild(li);
+            });
+            banner.style.display = 'block';
+            // Populate hidden inputs for Formspree
+            document.getElementById('preferred_dates_input').value = dates.join(', ');
+            document.getElementById('preferred_time_input').value  = time;
+          }
+        } catch(e) {}
+      }
+    })();
   </script>
 </body>
 </html>
